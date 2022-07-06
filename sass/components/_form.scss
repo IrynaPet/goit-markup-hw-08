@@ -1,0 +1,139 @@
+.form {
+    margin: 40px;
+
+    &__title {
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.15;
+        color: $title-text-color;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.form-contacts {
+    display: block;
+    margin-bottom: 28px;
+    position: relative;
+    justify-content: space-around;
+
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    &__text {
+        position: absolute;
+        top: 80%;
+        left: 0px;
+        transform: translateY(-50px);  
+        font-size: 12px;
+        line-height: 1.167;
+        letter-spacing: 0.01em;
+    }
+    &__input {
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding: 11px; 
+        padding-left: 35px;
+        width: 100%;  
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        display: inline-block;
+        fill: $title-text-color;
+    }
+    &:focus-within &__icon {
+        fill: $accent-color;
+    }
+    &:focus-within &__input,
+    &:focus-within &__input {
+        outline-color: $accent-color;
+    }
+
+    &__icon-checkbox {
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        border: 2px solid $title-text-color;
+        border-radius: 2px;
+        margin-right: 7px;
+    }
+
+    &__checkbox:checked + &__icon-checkbox {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        background-image: url('../images/icon_check.svg');
+        background-size: contain;
+        background-origin: border-box;
+    }
+
+    &__checkbox {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+}
+
+.form-comments {
+    display: flex;
+    flex-direction: column;
+    
+    &__input {
+        resize: none;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 1.167;
+        letter-spacing: 0.01em;
+        margin-bottom: 4px;
+    }
+
+    & ::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+        font-size: 12px;
+        line-height: 1.167;
+        letter-spacing: 0.01em;
+    }
+
+    &:focus-within &__input,
+    &:focus-within &__input {
+        outline-color: $accent-color;
+    }
+}
+
+.form-contacts {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1999px) {
+        font-size: 12px;
+        line-height: 1,167;
+        
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
+    &__contract {
+        color: $accent-color;
+        text-decoration: underline;
+    }
+}

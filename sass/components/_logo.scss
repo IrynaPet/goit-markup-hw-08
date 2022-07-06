@@ -1,0 +1,26 @@
+.logo {
+    color: #000000; 
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+
+    &__web {
+        color: $accent-color;
+    }
+
+    &__studio {
+        color: $white-color; 
+    }
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}  
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+}
